@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdtdpfeyxv58k"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_ue1uj"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="2_a465f"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="3_txa0e"]
+[ext_resource type="PackedScene" uid="uid://dov5o40ll5bep" path="res://scenes/bounce_platform.tscn" id="4_kycy5"]
+[ext_resource type="PackedScene" uid="uid://bxiobdmmgm841" path="res://scenes/limited_platform.tscn" id="5_h68uo"]
+[ext_resource type="PackedScene" uid="uid://b2oqlp0qjk6xe" path="res://scenes/left_platform.tscn" id="6_fkn77"]
+[ext_resource type="PackedScene" uid="uid://bpjcmjv62acoj" path="res://scenes/right_platform.tscn" id="7_qkbax"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="8_ewo4x"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_ue1uj")
+
+[node name="Player" parent="." instance=ExtResource("2_a465f")]
+position = Vector2(32, 88)
+
+[node name="normal_platform" parent="." instance=ExtResource("3_txa0e")]
+position = Vector2(24, 112)
+
+[node name="bounce_platform" parent="." instance=ExtResource("4_kycy5")]
+position = Vector2(104, 96)
+
+[node name="normal_platform2" parent="." instance=ExtResource("3_txa0e")]
+position = Vector2(104, 48)
+
+[node name="limited_platform" parent="." instance=ExtResource("5_h68uo")]
+position = Vector2(192, 104)
+
+[node name="normal_platform3" parent="." instance=ExtResource("3_txa0e")]
+position = Vector2(192, 160)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("6_fkn77")]
+position = Vector2(112, 24)
+
+[node name="right_platform" parent="." instance=ExtResource("7_qkbax")]
+position = Vector2(104, 136)
+
+[node name="spike" parent="." instance=ExtResource("8_ewo4x")]
+position = Vector2(56, 88)
+
+[node name="spike2" parent="." instance=ExtResource("8_ewo4x")]
+position = Vector2(72, 88)

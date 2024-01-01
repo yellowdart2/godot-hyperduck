@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://danuidwf2e31w"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_wau8l"]
+[ext_resource type="Texture2D" uid="uid://c5x3l7vwc8rx8" path="res://assets/player.png" id="2_3rpb4"]
+[ext_resource type="Resource" uid="uid://fnwwlb25nolk" path="res://resources/DefaultMovementData.tres" id="2_4knmn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1ty6"]
+atlas = ExtResource("2_3rpb4")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh7tt"]
+atlas = ExtResource("2_3rpb4")
+region = Rect2(24, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p40b1"]
+atlas = ExtResource("2_3rpb4")
+region = Rect2(96, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taehe"]
+atlas = ExtResource("2_3rpb4")
+region = Rect2(48, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n0v2"]
+atlas = ExtResource("2_3rpb4")
+region = Rect2(72, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5kt6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1ty6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh7tt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p40b1")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taehe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n0v2")
+}],
+"loop": true,
+"name": &"run",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23oyl"]
+size = Vector2(12, 20)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 30
+floor_constant_speed = true
+floor_snap_length = 3.0
+script = ExtResource("1_wau8l")
+movement_data = ExtResource("2_4knmn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_i5kt6")
+animation = &"run"
+frame_progress = 0.837212
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -10)
+shape = SubResource("RectangleShape2D_23oyl")
+
+[node name="CoyoteJumpTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
