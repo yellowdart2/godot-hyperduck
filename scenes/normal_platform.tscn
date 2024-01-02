@@ -1,19 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://qt5qj4qw8epi"]
 
-[ext_resource type="Texture2D" uid="uid://dug228luplsoa" path="res://assets/normal_platform.png" id="1_1yovf"]
+[ext_resource type="Texture2D" uid="uid://d2pah2tltafhs" path="res://assets/normal_platform.png" id="1_1yovf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gqpym"]
-size = Vector2(64, 8)
+size = Vector2(40, 5)
 
 [node name="normal_platform" type="StaticBody2D"]
 collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(32, 4)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_1yovf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, 4)
 shape = SubResource("RectangleShape2D_gqpym")
 one_way_collision = true

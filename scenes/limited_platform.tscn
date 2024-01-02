@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxiobdmmgm841"]
 
 [ext_resource type="Script" path="res://scripts/limited_platform.gd" id="1_twly6"]
-[ext_resource type="Texture2D" uid="uid://jtibs7myq3jv" path="res://assets/limited_platform.png" id="1_y4yja"]
+[ext_resource type="Texture2D" uid="uid://bwxuvwdml7t2g" path="res://assets/limited_platform.png" id="1_y4yja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uucvo"]
-size = Vector2(64, 8)
+size = Vector2(40, 5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_khkun"]
-font_size = 8
+font_size = 5
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
@@ -16,18 +16,15 @@ collision_layer = 16
 script = ExtResource("1_twly6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(32, 4)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_y4yja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, 4)
 shape = SubResource("RectangleShape2D_uucvo")
 one_way_collision = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 30.0
-offset_top = -2.0
-offset_right = 54.0
-offset_bottom = 21.0
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 23.0
+offset_bottom = 19.0
 label_settings = SubResource("LabelSettings_khkun")
