@@ -1,5 +1,7 @@
 # godot-hyperduck
 
+![](https://media.giphy.com/media/sZvdzIg9iFLCCBd0X7/giphy.gif)
+
 This is a project to recreate a flash game in Godot 4. It's called hyperduck 
 for obvious reasons. 
 
