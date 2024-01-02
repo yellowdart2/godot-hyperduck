@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
+signal limited_interaction
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,11 +35,20 @@ func _physics_process(delta):
 	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		print("Collided with: ", collision.get_collider().name)
-		if (collision.get_collider().name == "bounce_platform"):
+		#print("Collided with: ", collision.get_collider().name, ": ", collision.get_collider().collision_layer)
+		# collision layers do not seem to work intuitively
+		if (collision.get_collider().collision_layer == 8):
+			limited = false
 			handle_bounce()
-		if (collision.get_collider().name == "spike"):
+		if (collision.get_collider().collision_layer == 2):
+			limited = false
 			handle_death()
+		if (collision.get_collider().collision_layer == 16):
+			if limited == false:
+				handle_limited_platform()
+				limited = true
+	if get_slide_collision_count() == 0:
+		limited = false
 	
 	#if Input.is_action_just_pressed("ui_accept"):
 	#	movement_data = load("res://FasterMovementData.tres")
@@ -81,12 +91,11 @@ func update_animations(input_axis):
 		animated_sprite_2d.play("jump")
 
 func handle_bounce_platform():
-	print("Hello")
 	bouncing = true
 
 func handle_limited_platform():
-	print("Limited")
 	limited = true
+	emit_signal("limited_interaction")
 
 func handle_death():
 	print("Dead")
