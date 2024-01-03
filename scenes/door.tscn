@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bs41in7hriecq"]
 
-[ext_resource type="Texture2D" uid="uid://1442a1nbr3u4" path="res://assets/door.png" id="1_iekyy"]
+[ext_resource type="Texture2D" uid="uid://1442a1nbr3u4" path="res://sprites/door.png" id="1_1ilrj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ccoyc"]
 size = Vector2(10, 10)
@@ -9,7 +9,7 @@ size = Vector2(10, 10)
 collision_layer = 32
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_iekyy")
+texture = ExtResource("1_1ilrj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ccoyc")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b21lv5lfltrqs"
-path="res://.godot/imported/bounce_platform.png-9fbb3473a55a139cdccce6b91faa2c2e.ctex"
+uid="uid://cuuvhe1mcistj"
+path="res://.godot/imported/right_platform.png-05299952baf058a0f5310c451fb0b513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bounce_platform.png"
-dest_files=["res://.godot/imported/bounce_platform.png-9fbb3473a55a139cdccce6b91faa2c2e.ctex"]
+source_file="res://sprites/right_platform.png"
+dest_files=["res://.godot/imported/right_platform.png-05299952baf058a0f5310c451fb0b513.ctex"]
 
 [params]
 

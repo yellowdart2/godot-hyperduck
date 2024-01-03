@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cdtdpfeyxv58k"]
+[gd_scene load_steps=14 format=3 uid="uid://cdtdpfeyxv58k"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_ue1uj"]
 [ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="2_a465f"]
@@ -11,18 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="9_qcfya"]
 [ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="11_mb1hp"]
 [ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="11_omngk"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="11_wucpr"]
 [ext_resource type="PackedScene" uid="uid://3kwuam5a2vsf" path="res://scenes/key.tscn" id="12_avq7q"]
-
-[sub_resource type="Theme" id="Theme_ssxie"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ie2un"]
-bg_color = Color(0.121569, 0.121569, 0.121569, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_xutr8"]
-font_size = 8
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_ue1uj")
+music = ExtResource("11_mb1hp")
 
 [node name="player" parent="." instance=ExtResource("2_a465f")]
 position = Vector2(32, 88)
@@ -54,47 +48,7 @@ position = Vector2(56, 136)
 [node name="platform_spawner" parent="." instance=ExtResource("9_qcfya")]
 position = Vector2(8, 168)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_top = 144.0
-offset_right = 320.0
-offset_bottom = 184.0
-
-[node name="ui_panel" type="Panel" parent="Control"]
-layout_mode = 2
-offset_top = 8.0
-offset_right = 320.0
-offset_bottom = 36.0
-theme = SubResource("Theme_ssxie")
-theme_override_styles/panel = SubResource("StyleBoxFlat_ie2un")
-
-[node name="level_label" type="Label" parent="Control/ui_panel"]
-layout_mode = 0
-offset_left = 8.0
-offset_right = 62.0
-offset_bottom = 23.0
-text = "Level 1 - The Thunderdome"
-label_settings = SubResource("LabelSettings_xutr8")
-
-[node name="slot1" type="Sprite2D" parent="Control/ui_panel"]
-position = Vector2(25, 20)
-
-[node name="slot2" type="Sprite2D" parent="Control/ui_panel"]
-position = Vector2(70, 20)
-
-[node name="slot3" type="Sprite2D" parent="Control/ui_panel"]
-position = Vector2(115, 20)
-
-[node name="slot4" type="Sprite2D" parent="Control/ui_panel"]
-position = Vector2(160, 20)
-
-[node name="slot5" type="Sprite2D" parent="Control/ui_panel"]
-position = Vector2(205, 20)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_mb1hp")
-autoplay = true
+[node name="Control" parent="." instance=ExtResource("11_wucpr")]
 
 [node name="door" parent="." instance=ExtResource("11_omngk")]
 position = Vector2(200, 96)

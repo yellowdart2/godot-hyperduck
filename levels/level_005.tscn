@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://00ladmydi7bm"]
+
+[ext_resource type="Script" path="res://levels/level_005.gd" id="1_0pqvr"]
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="1_vl225"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="2_52yds"]
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="2_rhryl"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="5_n27x0"]
+[ext_resource type="PackedScene" uid="uid://3kwuam5a2vsf" path="res://scenes/key.tscn" id="6_pave2"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="7_ypau2"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="8_pdnlc"]
+
+[node name="level_005" type="Node2D"]
+script = ExtResource("1_0pqvr")
+music = ExtResource("2_rhryl")
+
+[node name="platform_spawner" parent="." instance=ExtResource("1_vl225")]
+platform_queue = ["limited", "bounce", "right"]
+
+[node name="Control" parent="." instance=ExtResource("2_52yds")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 5 - Playtime Is Over"
+
+[node name="normal_platform" parent="." instance=ExtResource("5_n27x0")]
+position = Vector2(24, 144)
+
+[node name="normal_platform2" parent="." instance=ExtResource("5_n27x0")]
+position = Vector2(24, 48)
+
+[node name="normal_platform4" parent="." instance=ExtResource("5_n27x0")]
+position = Vector2(152, 48)
+
+[node name="normal_platform3" parent="." instance=ExtResource("5_n27x0")]
+position = Vector2(152, 144)
+
+[node name="key" parent="." instance=ExtResource("6_pave2")]
+position = Vector2(152, 136)
+
+[node name="door" parent="." instance=ExtResource("7_ypau2")]
+position = Vector2(152, 40)
+
+[node name="player" parent="." instance=ExtResource("8_pdnlc")]
+position = Vector2(24, 136)
+
+[editable path="platform_spawner"]
+[editable path="Control"]

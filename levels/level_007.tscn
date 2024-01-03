@@ -1,0 +1,254 @@
+[gd_scene load_steps=9 format=3 uid="uid://cp76dvpebe6q2"]
+
+[ext_resource type="Script" path="res://levels/level_007.gd" id="1_qgyyi"]
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="2_6kg8o"]
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="3_decxt"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="4_7npfr"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="5_50qh7"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="6_gl0k3"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="7_es5pb"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="8_fmi4w"]
+
+[node name="level_007" type="Node2D"]
+script = ExtResource("1_qgyyi")
+music = ExtResource("2_6kg8o")
+
+[node name="platform_spawner" parent="." instance=ExtResource("3_decxt")]
+platform_queue = ["bounce", "right", "right"]
+
+[node name="Control" parent="." instance=ExtResource("4_7npfr")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 7 - Smooth Operator"
+
+[node name="normal_platform" parent="." instance=ExtResource("5_50qh7")]
+position = Vector2(32, 144)
+
+[node name="normal_platform2" parent="." instance=ExtResource("5_50qh7")]
+position = Vector2(288, 40)
+
+[node name="player" parent="." instance=ExtResource("6_gl0k3")]
+position = Vector2(32, 136)
+
+[node name="terrain" type="Node2D" parent="."]
+position = Vector2(32, 136)
+
+[node name="spike42" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, 8)
+rotation = -1.5708
+
+[node name="spike43" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, 0)
+rotation = -1.5708
+
+[node name="spike44" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -8)
+rotation = -1.5708
+
+[node name="spike45" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -16)
+rotation = -1.5708
+
+[node name="spike46" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -32)
+rotation = -1.5708
+
+[node name="spike48" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -40)
+rotation = -1.5708
+
+[node name="spike49" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -48)
+rotation = -1.5708
+
+[node name="spike50" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -56)
+rotation = -1.5708
+
+[node name="spike51" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -64)
+rotation = -1.5708
+
+[node name="spike52" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -72)
+rotation = -1.5708
+
+[node name="spike53" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -80)
+rotation = -1.5708
+
+[node name="spike47" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -24)
+rotation = -1.5708
+
+[node name="spike54" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, 8)
+rotation = -1.5708
+
+[node name="spike55" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, 0)
+rotation = -1.5708
+
+[node name="spike56" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -8)
+rotation = -1.5708
+
+[node name="spike57" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -16)
+rotation = -1.5708
+
+[node name="spike58" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -32)
+rotation = -1.5708
+
+[node name="spike59" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -40)
+rotation = -1.5708
+
+[node name="spike60" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -48)
+rotation = -1.5708
+
+[node name="spike61" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -56)
+rotation = -1.5708
+
+[node name="spike62" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -64)
+rotation = -1.5708
+
+[node name="spike63" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -72)
+rotation = -1.5708
+
+[node name="spike64" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -80)
+rotation = -1.5708
+
+[node name="spike65" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(24, -24)
+rotation = -1.5708
+
+[node name="spike15" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(32, -80)
+
+[node name="spike16" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(40, -80)
+
+[node name="spike17" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(48, -80)
+
+[node name="spike18" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(56, -80)
+
+[node name="spike19" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(64, -80)
+
+[node name="spike20" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(72, -80)
+
+[node name="spike21" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(80, -80)
+
+[node name="spike22" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(88, -80)
+
+[node name="spike23" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(96, -80)
+
+[node name="spike24" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(104, -80)
+
+[node name="spike25" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(112, -80)
+
+[node name="spike26" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(120, -80)
+
+[node name="spike27" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(128, -80)
+
+[node name="spike28" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(136, -80)
+
+[node name="spike29" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(144, -80)
+
+[node name="spike30" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(152, -80)
+
+[node name="spike31" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(160, -80)
+
+[node name="spike32" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(168, -80)
+
+[node name="spike33" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(176, -80)
+
+[node name="spike34" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(184, -80)
+
+[node name="spike35" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(192, -80)
+
+[node name="spike36" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(200, -80)
+
+[node name="spike37" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(208, -80)
+
+[node name="spike38" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(216, -80)
+
+[node name="spike39" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(224, -80)
+
+[node name="spike40" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(232, -80)
+
+[node name="spike41" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(240, -80)
+
+[node name="spike66" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(248, -80)
+
+[node name="spike67" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(256, -80)
+
+[node name="spike68" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(264, -80)
+
+[node name="spike69" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(272, -80)
+
+[node name="spike70" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(280, -80)
+
+[node name="spike71" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(288, -80)
+
+[node name="spike72" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(296, -80)
+
+[node name="spike73" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(304, -80)
+
+[node name="spike74" parent="terrain" instance=ExtResource("7_es5pb")]
+position = Vector2(312, -80)
+
+[node name="door" parent="." instance=ExtResource("8_fmi4w")]
+position = Vector2(288, 32)
+
+[editable path="platform_spawner"]
+[editable path="Control"]

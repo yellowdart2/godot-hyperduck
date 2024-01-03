@@ -1,0 +1,354 @@
+[gd_scene load_steps=9 format=3 uid="uid://ddqa4kniko1su"]
+
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="1_6l4e5"]
+[ext_resource type="Script" path="res://levels/level_006.gd" id="1_pgmfm"]
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="2_agovx"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="2_upgjr"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="3_lnw3q"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="4_fnr0k"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="5_qtiav"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="6_aaeou"]
+
+[node name="level_006" type="Node2D"]
+script = ExtResource("1_pgmfm")
+music = ExtResource("2_agovx")
+
+[node name="platform_spawner" parent="." instance=ExtResource("1_6l4e5")]
+platform_queue = ["right", "bounce", "normal"]
+
+[node name="Control" parent="." instance=ExtResource("2_upgjr")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 6 - Uh Oh"
+
+[node name="normal_platform" parent="." instance=ExtResource("3_lnw3q")]
+position = Vector2(24, 16)
+
+[node name="player" parent="." instance=ExtResource("4_fnr0k")]
+position = Vector2(24, 8)
+
+[node name="terrain" type="Node" parent="."]
+
+[node name="spike" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 24)
+rotation = 1.5708
+
+[node name="spike2" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 32)
+rotation = 1.5708
+
+[node name="spike3" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 40)
+rotation = 1.5708
+
+[node name="spike4" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 48)
+rotation = 1.5708
+
+[node name="spike5" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 56)
+rotation = 1.5708
+
+[node name="spike6" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 64)
+rotation = 1.5708
+
+[node name="spike7" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 72)
+rotation = 1.5708
+
+[node name="spike8" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 80)
+rotation = 1.5708
+
+[node name="spike9" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 88)
+rotation = 1.5708
+
+[node name="spike10" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 96)
+rotation = 1.5708
+
+[node name="spike11" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 104)
+rotation = 1.5708
+
+[node name="spike12" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 112)
+rotation = 1.5708
+
+[node name="spike13" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 120)
+rotation = 1.5708
+
+[node name="spike14" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(48, 128)
+rotation = 1.5708
+
+[node name="spike15" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(56, 128)
+
+[node name="spike16" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(64, 128)
+
+[node name="spike17" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(72, 128)
+
+[node name="spike18" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(80, 128)
+
+[node name="spike19" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(88, 128)
+
+[node name="spike20" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(96, 128)
+
+[node name="spike21" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(104, 128)
+
+[node name="spike22" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(112, 128)
+
+[node name="spike23" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(120, 128)
+
+[node name="spike24" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(128, 128)
+
+[node name="spike25" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 128)
+
+[node name="spike26" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(144, 128)
+
+[node name="spike27" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(152, 128)
+
+[node name="spike28" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(160, 128)
+
+[node name="spike29" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(168, 128)
+
+[node name="spike63" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(104, 16)
+rotation = 3.14159
+
+[node name="spike64" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(112, 16)
+rotation = 3.14159
+
+[node name="spike66" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(120, 16)
+rotation = 3.14159
+
+[node name="spike67" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(128, 16)
+rotation = 3.14159
+
+[node name="spike68" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 16)
+rotation = 3.14159
+
+[node name="spike69" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(144, 16)
+rotation = 3.14159
+
+[node name="spike70" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(152, 16)
+rotation = 3.14159
+
+[node name="spike71" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(160, 16)
+rotation = 3.14159
+
+[node name="spike30" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(176, 128)
+
+[node name="spike31" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(184, 128)
+
+[node name="spike32" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(192, 128)
+
+[node name="spike33" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 128)
+
+[node name="spike34" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(208, 128)
+
+[node name="spike35" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(208, 128)
+
+[node name="spike36" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(216, 128)
+
+[node name="spike37" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(224, 128)
+
+[node name="spike38" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(232, 128)
+
+[node name="spike39" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(240, 128)
+
+[node name="spike40" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(248, 128)
+
+[node name="spike41" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 128)
+
+[node name="spike42" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 120)
+rotation = -1.5708
+
+[node name="spike43" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 112)
+rotation = -1.5708
+
+[node name="spike44" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 104)
+rotation = -1.5708
+
+[node name="spike45" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 96)
+rotation = -1.5708
+
+[node name="spike46" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 80)
+rotation = -1.5708
+
+[node name="spike48" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 72)
+rotation = -1.5708
+
+[node name="spike49" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 64)
+rotation = -1.5708
+
+[node name="spike50" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 56)
+rotation = -1.5708
+
+[node name="spike51" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 48)
+rotation = -1.5708
+
+[node name="spike52" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 40)
+rotation = -1.5708
+
+[node name="spike53" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 32)
+rotation = -1.5708
+
+[node name="spike47" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(256, 88)
+rotation = -1.5708
+
+[node name="spike79" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 72)
+rotation = -1.5708
+
+[node name="spike80" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 64)
+rotation = -1.5708
+
+[node name="spike81" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 56)
+rotation = -1.5708
+
+[node name="spike82" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 48)
+rotation = -1.5708
+
+[node name="spike83" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 32)
+rotation = -1.5708
+
+[node name="spike84" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 24)
+rotation = -1.5708
+
+[node name="spike85" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 16)
+rotation = -1.5708
+
+[node name="spike86" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 8)
+rotation = -1.5708
+
+[node name="spike87" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 0)
+rotation = -1.5708
+
+[node name="spike88" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, -8)
+rotation = -1.5708
+
+[node name="spike89" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, -16)
+rotation = -1.5708
+
+[node name="spike90" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(136, 40)
+rotation = -1.5708
+
+[node name="spike54" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 128)
+rotation = -1.5708
+
+[node name="spike55" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 120)
+rotation = -1.5708
+
+[node name="spike56" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 112)
+rotation = -1.5708
+
+[node name="spike57" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 104)
+rotation = -1.5708
+
+[node name="spike58" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 88)
+rotation = -1.5708
+
+[node name="spike59" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 80)
+rotation = -1.5708
+
+[node name="spike60" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 72)
+rotation = -1.5708
+
+[node name="spike61" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 64)
+rotation = -1.5708
+
+[node name="spike62" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 56)
+rotation = -1.5708
+
+[node name="spike65" parent="terrain" instance=ExtResource("5_qtiav")]
+position = Vector2(200, 96)
+rotation = -1.5708
+
+[node name="normal_platform2" parent="." instance=ExtResource("3_lnw3q")]
+position = Vector2(296, 104)
+
+[node name="door" parent="." instance=ExtResource("6_aaeou")]
+position = Vector2(296, 96)
+
+[editable path="platform_spawner"]
+[editable path="Control"]

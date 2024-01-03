@@ -4,11 +4,11 @@ extends Node2D
 @export var platform_queue = ["normal", "bounce", "left", "right", "limited"]
 
 # grab a reference of each platform types so we can spawn them in later
-@onready var normal_texture = preload("res://assets/normal_platform.png")
-@onready var bounce_texture = preload("res://assets/bounce_platform.png")
-@onready var limited_texture = preload("res://assets/limited_platform.png")
-@onready var left_texture = preload("res://assets/left_platform.png")
-@onready var right_texture = preload("res://assets/right_platform.png")
+@onready var normal_texture = preload("res://sprites/normal_platform.png")
+@onready var bounce_texture = preload("res://sprites/bounce_platform.png")
+@onready var limited_texture = preload("res://sprites/limited_platform.png")
+@onready var left_texture = preload("res://sprites/left_platform.png")
+@onready var right_texture = preload("res://sprites/right_platform.png")
 
 # grab a reference to the player for the spawn platform signal
 @onready var player = $"../player"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpjcmjv62acoj"]
 
-[ext_resource type="Texture2D" uid="uid://cuuvhe1mcistj" path="res://assets/right_platform.png" id="1_dygr4"]
+[ext_resource type="Texture2D" uid="uid://cuuvhe1mcistj" path="res://sprites/right_platform.png" id="1_xeacy"]
 
 [sub_resource type="GDScript" id="GDScript_i47t3"]
 script/source = "extends StaticBody2D
@@ -10,7 +10,7 @@ var start_y
 var direction
 
 const SPEED = 1
-const MAX_DISTANCE = 25
+const MAX_DISTANCE = 75
 
 func _ready():
 	start_x = self.position.x
@@ -34,7 +34,7 @@ collision_layer = 4
 script = SubResource("GDScript_i47t3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_dygr4")
+texture = ExtResource("1_xeacy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_md0in")

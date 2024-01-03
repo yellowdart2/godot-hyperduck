@@ -5,7 +5,7 @@ var start_y
 var direction
 
 const SPEED = 1
-const MAX_DISTANCE = 25
+const MAX_DISTANCE = 75
 
 func _ready():
 	start_x = self.position.x

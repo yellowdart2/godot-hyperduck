@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dov5o40ll5bep"]
 
-[ext_resource type="Texture2D" uid="uid://b21lv5lfltrqs" path="res://assets/bounce_platform.png" id="1_46vnx"]
+[ext_resource type="Texture2D" uid="uid://b21lv5lfltrqs" path="res://sprites/bounce_platform.png" id="1_v8jpt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3klm4"]
 size = Vector2(40, 5)
@@ -9,7 +9,7 @@ size = Vector2(40, 5)
 collision_layer = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_46vnx")
+texture = ExtResource("1_v8jpt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3klm4")

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="hyperduck"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="res://levels/level_001.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+audio_manager="*res://scripts/audio_manager.gd"
 
 [display]
 

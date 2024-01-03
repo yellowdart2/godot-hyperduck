@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://c48ctk1vo8l8u"]
+
+[sub_resource type="Theme" id="Theme_ssxie"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ie2un"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xutr8"]
+font_size = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 144.0
+offset_right = 320.0
+offset_bottom = 184.0
+
+[node name="ui_panel" type="Panel" parent="."]
+layout_mode = 2
+offset_top = 8.0
+offset_right = 320.0
+offset_bottom = 36.0
+theme = SubResource("Theme_ssxie")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ie2un")
+
+[node name="level_label" type="Label" parent="ui_panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 62.0
+offset_bottom = 23.0
+text = "Level 1 - The Thunderdome"
+label_settings = SubResource("LabelSettings_xutr8")
+
+[node name="slot1" type="Sprite2D" parent="ui_panel"]
+position = Vector2(25, 20)
+
+[node name="slot2" type="Sprite2D" parent="ui_panel"]
+position = Vector2(70, 20)
+
+[node name="slot3" type="Sprite2D" parent="ui_panel"]
+position = Vector2(115, 20)
+
+[node name="slot4" type="Sprite2D" parent="ui_panel"]
+position = Vector2(160, 20)
+
+[node name="slot5" type="Sprite2D" parent="ui_panel"]
+position = Vector2(205, 20)

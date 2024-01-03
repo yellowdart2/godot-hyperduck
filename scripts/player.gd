@@ -21,6 +21,9 @@ var double_jump_flag = false
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $CoyoteJumpTimer
+@onready var bounce_sfx = $bounce_sfx
+@onready var key_sfx = $key_sfx
+
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -113,6 +116,7 @@ func update_animations(input_axis):
 # collision functions
 func handle_bounce():
 	velocity.y = movement_data.bounce_speed
+	bounce_sfx.play()
 
 func handle_limited_platform():
 	# we've landed on a limited platform, so toggle the flag and emit the signal
@@ -125,8 +129,10 @@ func handle_door():
 
 func handle_key():
 	emit_signal("captured_key")
-	
+	key_sfx.play()
+
 # state functions
 func handle_death():
 	# we're dead, so emit the signal for the level script
 	emit_signal("player_died")
+	

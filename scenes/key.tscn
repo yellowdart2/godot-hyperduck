@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3kwuam5a2vsf"]
 
-[ext_resource type="Texture2D" uid="uid://bfnf4y7px3t3v" path="res://assets/key.png" id="1_knr57"]
+[ext_resource type="Texture2D" uid="uid://bfnf4y7px3t3v" path="res://sprites/key.png" id="1_6pi6k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isggj"]
 size = Vector2(10, 3)
@@ -9,7 +9,7 @@ size = Vector2(10, 3)
 collision_layer = 64
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_knr57")
+texture = ExtResource("1_6pi6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)

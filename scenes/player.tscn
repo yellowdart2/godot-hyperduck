@@ -1,31 +1,33 @@
-[gd_scene load_steps=12 format=3 uid="uid://danuidwf2e31w"]
+[gd_scene load_steps=14 format=3 uid="uid://danuidwf2e31w"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wau8l"]
-[ext_resource type="Texture2D" uid="uid://duw1iiui1n6wf" path="res://assets/player.png" id="2_3rpb4"]
 [ext_resource type="Resource" uid="uid://fnwwlb25nolk" path="res://resources/DefaultMovementData.tres" id="2_4knmn"]
+[ext_resource type="Texture2D" uid="uid://duw1iiui1n6wf" path="res://sprites/player.png" id="3_vag07"]
+[ext_resource type="AudioStream" uid="uid://d18bshqf7255g" path="res://audio/dog jump.mp3" id="4_e5582"]
+[ext_resource type="AudioStream" uid="uid://c682vrlwvkllv" path="res://audio/dust.mp3" id="5_62bc2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2b2o"]
-atlas = ExtResource("2_3rpb4")
+atlas = ExtResource("3_vag07")
 region = Rect2(0, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfvqc"]
-atlas = ExtResource("2_3rpb4")
+atlas = ExtResource("3_vag07")
 region = Rect2(10, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r23uk"]
-atlas = ExtResource("2_3rpb4")
+atlas = ExtResource("3_vag07")
 region = Rect2(20, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwwvf"]
-atlas = ExtResource("2_3rpb4")
+atlas = ExtResource("3_vag07")
 region = Rect2(10, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d78ua"]
-atlas = ExtResource("2_3rpb4")
+atlas = ExtResource("3_vag07")
 region = Rect2(30, 0, 10, 10)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kb4eb"]
-atlas = ExtResource("2_3rpb4")
+atlas = ExtResource("3_vag07")
 region = Rect2(40, 0, 10, 10)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_novgr"]
@@ -88,3 +90,9 @@ shape = SubResource("RectangleShape2D_23oyl")
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="bounce_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_e5582")
+
+[node name="key_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_62bc2")

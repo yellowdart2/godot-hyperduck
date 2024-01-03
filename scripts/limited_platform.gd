@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 # for now, every limited platform is 3 attempts
-var attempts = 3
+@export var attempts = 3
 
 # this is the reference to the local label node so we can draw text
 @onready var label = $Label

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg3bie7fy1h61"]
+
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="1_tfr7e"]
+
+[sub_resource type="GDScript" id="GDScript_5fu1x"]
+script/source = "extends Node2D
+
+var audio_stream_player
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	audio_stream_player = get_node(\"/root/audio_manager/AudioStreamPlayer\")
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	if not audio_stream_player.playing():
+		audio_stream_player.play()
+"
+
+[node name="audio_manager" type="Node2D"]
+script = SubResource("GDScript_5fu1x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_tfr7e")

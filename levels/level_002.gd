@@ -8,7 +8,7 @@ extends Node2D
 var reset_player_x
 var reset_player_y
 
-var has_key = false
+@export var has_key : bool = true
 
 var current_scene
 
@@ -32,7 +32,7 @@ func _physics_process(_delta):
 func reset_player():
 	player.position.x = reset_player_x
 	player.position.y = reset_player_y 
-	get_tree().change_scene_to_file.bind("res://scenes/world.tscn").call_deferred()
+	get_tree().change_scene_to_file.bind("res://levels/level_002.tscn").call_deferred()
 	
 func _on_player_died():
 	reset_player()
@@ -47,3 +47,4 @@ func _on_player_reached_door():
 	if has_key == true:
 		print("Level complete")
 		has_key = false
+		get_tree().change_scene_to_file.bind("res://levels/level_003.tscn").call_deferred()
