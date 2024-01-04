@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7h68be8p3cp8"]
+
+[ext_resource type="Script" path="res://levels/level_014.gd" id="1_ryby8"]
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="2_lfyk2"]
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="3_25hfi"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="4_tbxhi"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="5_jv1pt"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="6_haany"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="7_ijoai"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="8_ux2l4"]
+
+[node name="level_014" type="Node2D"]
+script = ExtResource("1_ryby8")
+music = ExtResource("2_lfyk2")
+
+[node name="platform_spawner" parent="." instance=ExtResource("3_25hfi")]
+platform_queue = ["bounce"]
+
+[node name="Control" parent="." instance=ExtResource("4_tbxhi")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 14 - Tight Squeeze"
+
+[node name="normal_platform" parent="." instance=ExtResource("5_jv1pt")]
+position = Vector2(40, 136)
+
+[node name="normal_platform2" parent="." instance=ExtResource("5_jv1pt")]
+position = Vector2(160, 136)
+
+[node name="player" parent="." instance=ExtResource("6_haany")]
+position = Vector2(40, 128)
+
+[node name="door" parent="." instance=ExtResource("7_ijoai")]
+position = Vector2(160, 128)
+
+[node name="terrain" type="Node2D" parent="."]
+
+[node name="spike24" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 104)
+rotation = -1.5708
+
+[node name="spike25" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 112)
+rotation = -1.5708
+
+[node name="spike26" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 120)
+rotation = -1.5708
+
+[node name="spike27" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 128)
+rotation = -1.5708
+
+[node name="spike28" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 136)
+rotation = -1.5708
+
+[node name="spike29" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 144)
+rotation = -1.5708
+
+[node name="spike33" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 80)
+rotation = -1.5708
+
+[node name="spike34" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 88)
+rotation = -1.5708
+
+[node name="spike35" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 96)
+rotation = -1.5708
+
+[node name="spike30" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, -8)
+rotation = -1.5708
+
+[node name="spike31" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 0)
+rotation = -1.5708
+
+[node name="spike32" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 8)
+rotation = -1.5708
+
+[node name="spike36" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 16)
+rotation = -1.5708
+
+[node name="spike37" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 24)
+rotation = -1.5708
+
+[node name="spike38" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, 32)
+rotation = -1.5708
+
+[node name="spike39" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, -32)
+rotation = -1.5708
+
+[node name="spike40" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, -24)
+rotation = -1.5708
+
+[node name="spike41" parent="terrain" groups=["right_wall"] instance=ExtResource("8_ux2l4")]
+position = Vector2(120, -16)
+rotation = -1.5708
+
+[editable path="platform_spawner"]
+[editable path="Control"]

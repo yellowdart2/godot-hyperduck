@@ -1,0 +1,127 @@
+[gd_scene load_steps=10 format=3 uid="uid://doinmdsqsnx7k"]
+
+[ext_resource type="Script" path="res://levels/level_011.gd" id="1_qpu1c"]
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="1_yxu6d"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="2_x0vg3"]
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="2_xw1wa"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="5_nfqyf"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="6_ty15f"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="7_l7nei"]
+[ext_resource type="PackedScene" uid="uid://3kwuam5a2vsf" path="res://scenes/key.tscn" id="8_u207u"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="9_c87c8"]
+
+[node name="level_011" type="Node2D"]
+script = ExtResource("1_qpu1c")
+music = ExtResource("2_xw1wa")
+
+[node name="platform_spawner" parent="." instance=ExtResource("1_yxu6d")]
+platform_queue = ["bounce", "bounce", "bounce"]
+
+[node name="Control" parent="." instance=ExtResource("2_x0vg3")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 11 - Roundabouts"
+
+[node name="normal_platform" parent="." instance=ExtResource("5_nfqyf")]
+position = Vector2(104, 136)
+
+[node name="normal_platform4" parent="." instance=ExtResource("5_nfqyf")]
+position = Vector2(104, 16)
+
+[node name="normal_platform3" parent="." instance=ExtResource("5_nfqyf")]
+position = Vector2(256, 48)
+
+[node name="player" parent="." instance=ExtResource("6_ty15f")]
+position = Vector2(104, 128)
+
+[node name="door" parent="." instance=ExtResource("7_l7nei")]
+position = Vector2(104, 8)
+
+[node name="key" parent="." instance=ExtResource("8_u207u")]
+position = Vector2(256, 40)
+
+[node name="terrain" type="Node2D" parent="."]
+
+[node name="spike" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(176, 88)
+
+[node name="spike2" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(168, 88)
+
+[node name="spike3" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(160, 88)
+
+[node name="spike4" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(152, 88)
+
+[node name="spike10" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 56)
+rotation = -1.5708
+
+[node name="spike11" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 64)
+rotation = -1.5708
+
+[node name="spike12" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 72)
+rotation = -1.5708
+
+[node name="spike13" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 80)
+rotation = -1.5708
+
+[node name="spike14" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 96)
+rotation = -1.5708
+
+[node name="spike15" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 104)
+rotation = -1.5708
+
+[node name="spike16" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 112)
+rotation = -1.5708
+
+[node name="spike17" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 120)
+rotation = -1.5708
+
+[node name="spike18" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 128)
+rotation = -1.5708
+
+[node name="spike19" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 136)
+rotation = -1.5708
+
+[node name="spike20" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 136)
+rotation = -1.5708
+
+[node name="spike5" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(184, 88)
+
+[node name="spike6" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(192, 88)
+
+[node name="spike7" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(200, 88)
+
+[node name="spike8" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(208, 88)
+
+[node name="spike21" parent="terrain" instance=ExtResource("9_c87c8")]
+position = Vector2(216, 88)
+
+[editable path="platform_spawner"]
+[editable path="Control"]

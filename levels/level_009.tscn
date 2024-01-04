@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://bve1k23oq25d7"]
+
+[ext_resource type="Script" path="res://levels/level_009.gd" id="1_a1owk"]
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="1_tpi7h"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="2_h332t"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="4_ne3lk"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="5_rw1gi"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="6_6g402"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="7_0n077"]
+
+[node name="level_009" type="Node2D"]
+script = ExtResource("1_a1owk")
+
+[node name="platform_spawner" parent="." instance=ExtResource("1_tpi7h")]
+platform_queue = ["left", "left", "left"]
+
+[node name="Control" parent="." instance=ExtResource("2_h332t")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 9 - Sideways"
+
+[node name="normal_platform" parent="." instance=ExtResource("4_ne3lk")]
+position = Vector2(160, 128)
+
+[node name="player" parent="." instance=ExtResource("5_rw1gi")]
+position = Vector2(160, 120)
+
+[node name="normal_platform2" parent="." instance=ExtResource("4_ne3lk")]
+position = Vector2(160, 24)
+
+[node name="door" parent="." instance=ExtResource("6_6g402")]
+position = Vector2(160, 16)
+
+[node name="terrain" type="Node2D" parent="."]
+
+[node name="spike" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 128)
+rotation = 1.5708
+
+[node name="spike2" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 120)
+rotation = 1.5708
+
+[node name="spike3" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 112)
+rotation = 1.5708
+
+[node name="spike4" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 104)
+rotation = 1.5708
+
+[node name="spike5" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 96)
+rotation = 1.5708
+
+[node name="spike6" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 88)
+rotation = 1.5708
+
+[node name="spike7" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 80)
+rotation = 1.5708
+
+[node name="spike8" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 72)
+rotation = 1.5708
+
+[node name="spike87" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 64)
+rotation = 1.5708
+
+[node name="spike9" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 56)
+rotation = 1.5708
+
+[node name="spike10" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 48)
+rotation = 1.5708
+
+[node name="spike11" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 40)
+rotation = 1.5708
+
+[node name="spike88" parent="terrain" instance=ExtResource("7_0n077")]
+position = Vector2(136, 32)
+rotation = 1.5708
+
+[editable path="platform_spawner"]
+[editable path="Control"]

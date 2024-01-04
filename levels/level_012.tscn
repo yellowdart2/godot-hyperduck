@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbg84xsg8k41u"]
+
+[ext_resource type="PackedScene" uid="uid://caumqvqlxy0lq" path="res://scenes/platform_spawner.tscn" id="1_053u3"]
+[ext_resource type="Script" path="res://levels/level_012.gd" id="1_clrpd"]
+[ext_resource type="AudioStream" uid="uid://dcvsgsihf8ucp" path="res://audio/main-loop.mp3" id="2_uaoj5"]
+[ext_resource type="PackedScene" uid="uid://c48ctk1vo8l8u" path="res://scenes/ui.tscn" id="2_x7b3s"]
+[ext_resource type="PackedScene" uid="uid://dbbqrrq1adl8e" path="res://scenes/spike.tscn" id="5_keb37"]
+[ext_resource type="PackedScene" uid="uid://qt5qj4qw8epi" path="res://scenes/normal_platform.tscn" id="6_c64jk"]
+[ext_resource type="PackedScene" uid="uid://danuidwf2e31w" path="res://scenes/player.tscn" id="7_pvhke"]
+[ext_resource type="PackedScene" uid="uid://bs41in7hriecq" path="res://scenes/door.tscn" id="8_glkdl"]
+
+[node name="level_012" type="Node2D"]
+script = ExtResource("1_clrpd")
+music = ExtResource("2_uaoj5")
+
+[node name="platform_spawner" parent="." instance=ExtResource("1_053u3")]
+platform_queue = ["right", "right"]
+
+[node name="Control" parent="." instance=ExtResource("2_x7b3s")]
+offset_left = 32.0
+offset_top = 312.0
+offset_right = 352.0
+offset_bottom = 352.0
+
+[node name="ui_panel" parent="Control" index="0"]
+offset_left = -32.0
+offset_top = -160.0
+offset_right = 288.0
+offset_bottom = -132.0
+
+[node name="level_label" parent="Control/ui_panel" index="0"]
+text = "Level 12 - Low Clearance"
+
+[node name="terrain" type="Node2D" parent="."]
+
+[node name="spike15" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(128, 112)
+rotation = -1.5708
+
+[node name="spike16" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(128, 120)
+rotation = -1.5708
+
+[node name="spike17" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(128, 128)
+rotation = -1.5708
+
+[node name="spike18" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(128, 136)
+rotation = -1.5708
+
+[node name="spike20" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(128, 144)
+rotation = -1.5708
+
+[node name="spike19" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(168, 120)
+rotation = -1.5708
+
+[node name="spike21" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(168, 128)
+rotation = -1.5708
+
+[node name="spike22" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(168, 136)
+rotation = -1.5708
+
+[node name="spike23" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(168, 144)
+rotation = -1.5708
+
+[node name="spike31" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(168, 112)
+rotation = -1.5708
+
+[node name="spike24" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(224, 64)
+rotation = -1.5708
+
+[node name="spike25" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(224, 72)
+rotation = -1.5708
+
+[node name="spike26" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(224, 80)
+rotation = -1.5708
+
+[node name="spike27" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(224, 88)
+rotation = -1.5708
+
+[node name="spike28" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(224, 96)
+rotation = -1.5708
+
+[node name="spike29" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(224, 104)
+rotation = -1.5708
+
+[node name="spike34" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(264, 128)
+rotation = -1.5708
+
+[node name="spike37" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(264, 120)
+rotation = -1.5708
+
+[node name="spike35" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(264, 136)
+rotation = -1.5708
+
+[node name="spike36" parent="terrain" instance=ExtResource("5_keb37")]
+position = Vector2(264, 144)
+rotation = -1.5708
+
+[node name="normal_platform" parent="." instance=ExtResource("6_c64jk")]
+position = Vector2(40, 128)
+
+[node name="normal_platform2" parent="." instance=ExtResource("6_c64jk")]
+position = Vector2(296, 128)
+
+[node name="player" parent="." instance=ExtResource("7_pvhke")]
+position = Vector2(40, 120)
+
+[node name="door" parent="." instance=ExtResource("8_glkdl")]
+position = Vector2(296, 120)
+
+[editable path="platform_spawner"]
+[editable path="Control"]
