@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkwmdmrwf8nbd"]
+
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_f2s6w"]
+[ext_resource type="Texture2D" uid="uid://dkbr22kxctyqj" path="res://sprites/credits.png" id="1_uvt5f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j02p5"]
+bg_color = Color(0.898039, 0.690196, 0.513726, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f2s6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_uvt5f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -40.0
+offset_right = 22.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.258824, 0.431373, 0.364706, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_j02p5")
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]

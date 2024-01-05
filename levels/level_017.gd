@@ -47,4 +47,4 @@ func _on_player_reached_door():
 	if has_key == true:
 		print("Level complete")
 		has_key = false
-		get_tree().change_scene_to_file.bind("res://levels/level_018.tscn").call_deferred()
+		get_tree().change_scene_to_file.bind("res://scenes/credits.tscn").call_deferred()
