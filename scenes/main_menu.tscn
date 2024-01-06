@@ -28,7 +28,6 @@ music = ExtResource("2_nqy2w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
-scale = Vector2(1, 1)
 texture = ExtResource("3_3dcmj")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
